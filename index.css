@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&display=swap');
+@font-face {
+    font-family: 'idroid';
+    src: url('idroid.otf') format('opentype');
+}
+
+
+
+:root{/* 
+    raiz do documento-- VARIAVEIS EM CSS 
+    Muda automaticamente, caso precise se alguma alteração
+    */
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', cursive;
+    --font-android: 'idroid';
+}
+*{/* SELETORES GLOBAIS */
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0;
+    background-color:var(--cor0);
+    font-family: var(--font-padrao);
+}
+header{
+    background-image: linear-gradient(to bottom,var(--cor2),var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.267);
+}
+header>h1{
+    font-family: var(--font-destaque);
+    color: white;
+    font-weight: normal;
+    font-size: 3em;
+    margin: 30px 0 20px 0;
+}
+header>p{
+    font-family: var(--font-padrao);
+    max-width: 500px;
+    font-size: 1.em;
+    margin:auto;
+    color: #ffffff;
+}
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.192)
+}
+nav>a{
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-padrao);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+nav>a:hover{
+    background-color: var(--cor1);
+    color: var(--cor5);
+}
+main{
+    background-color: #ffffff;
+    min-width: 310px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 300px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 1px 2px 1px #0000003d;
+}
+main h1{
+    margin: 0;
+    padding:10px 10px 0 0;
+    color: #0d6b36; 
+    font-family: var(--font-android);
+    font-weight: normal;
+}
+main h2{
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    color: var(--cor4);
+    font-weight: normal;
+    font-family: var(--font-android);
+   /*  font-size: larger; */
+    text-indent: 8px;
+}
+img{ /* para deixar a imagem no meio horizontalmente de forma automatica */
+    width: 100%;
+ }
+ img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+ }
+
+main p{
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 1em;
+    margin: 15px 0px;
+    line-height: 2em; /* espaço entre as linhas */
+}
+main a{
+    text-decoration: none;
+    color: var(--cor4);
+    font-weight:bold ;
+    background-color: var(--cor1);
+    padding: 2px 4px;
+}
+main a:hover{
+    text-decoration: underline;
+}
+main a::after{
+content: '🔗';
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold
+}
+aside{
+background-color: var(--cor1);
+border-radius: 10px;
+padding: 10px;
+box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.263);
+}
+aside h3{
+    background-color: var(--cor4);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    font-size: 12px;
+    padding:10px;
+    margin: -10px -10px 0 -10px; /* margem negativa para preencher toda parte supérior do titulo */
+}
+aside ul {
+    columns: 2;
+    list-style-type:'\2714\0020';
+    list-style-position: inside;
+    padding-inline-start: 30px;/* padding do lado esquerdo */
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+
+    position: relative; /* posição da div RELATIVA E O Iframe ABSOLUTA */
+    padding-bottom: 57%;
+ }
+
+div.video>iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+} 
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+    text-align: center;
+}
+    
+footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
